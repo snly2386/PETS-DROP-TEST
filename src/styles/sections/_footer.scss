@@ -1,0 +1,43 @@
+.section-footer{
+  background-color: $color-main;
+  padding: 5rem 8rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #C75D00;
+  &__logo{
+    svg { 
+      width: 12rem;
+    }
+  }
+  &__social{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__links{
+    display: flex;
+    padding-left: 2rem;
+  }
+  &__copyright{
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+  }
+  &__link:not(:last-child){
+    margin-right: 1rem;
+  }
+  &__madein{
+    margin-left: 1rem;
+    padding: .3rem 1rem;
+    text-transform: uppercase;
+    color: $color-secondary;
+    font-weight: bold;
+    border: 1px solid currentColor;
+    span { 
+      display: block;
+    }
+  }
+  @include media-breakpoint-down(sm){
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,45 @@
+.section-details{
+  background-color: $color-main;
+  padding: $section-padding-desktop;
+  @include media-breakpoint-down(sm){
+    padding: $section-padding-mobile
+  }
+  & > div{
+    max-width: 160rem;
+    margin: 0 auto;
+  }
+  img {
+    width: 10.5rem;
+    margin-bottom: 5rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+    font-weight: normal;
+    max-width: 25rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    max-width: 43rem;
+  }
+  &__item:not(:first-child){
+    @include media-breakpoint-down(sm){
+      margin-top: 3rem;
+    }
+  }
+  &__item-top{
+    display: flex;
+    flex-direction: column;
+    @include media-breakpoint-down(sm){
+      flex-direction: row;
+      align-items: center;
+    }
+    h3{
+      @include media-breakpoint-down(sm){
+        margin-left: 2rem;
+        font-weight: 700;
+      }
+    }
+  }
+}

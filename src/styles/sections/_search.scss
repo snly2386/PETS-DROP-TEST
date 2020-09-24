@@ -1,0 +1,42 @@
+.section-search{
+  height: 80vh;
+  background-color: $color-main;
+  width: 100%;
+  padding: $section-padding-desktop;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include media-breakpoint-down(sm){
+    padding: $section-padding-mobile;
+    height: auto;
+  }
+  & > div {
+    margin: 0 auto;
+    max-width: 160rem;
+  }
+  &__content{
+    color: #fff;
+    font-size: 2.5rem;
+    font-family: $font-secondary;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    a {
+      margin-top: 2rem;
+      align-self: baseline;
+      @include media-breakpoint-down(sm){
+        align-self: center;
+      }
+    }
+  }
+  &__img{
+    img { 
+      width: 100%;
+      @include media-breakpoint-down(sm){
+        align-self: center;
+        margin-top: $margin-top-md;
+      }
+    }
+  }
+}

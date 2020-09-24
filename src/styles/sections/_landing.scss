@@ -1,0 +1,24 @@
+.section-landing{
+  height: calc(100vh - 9rem);
+  background-color: $color-main;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  & > div {
+    width: 70%;
+    margin: 0 auto;
+    max-width: 100rem;
+  }
+  &__header{
+    font-family: $font-main;
+    color: $color-secondary;
+    font-size: 5.6rem;
+    margin-top: -10rem;
+    text-align: center;
+  }
+  &__img{
+    width: 100%;
+    margin-top: 7rem;
+  }
+}

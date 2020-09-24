@@ -1,0 +1,58 @@
+.button{
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    padding: .8rem 4rem;
+    border-radius: .6rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+  }
+  &--animated-main{
+    background-color: transparent;
+    &:hover{
+      color: #fff;
+    }
+    &::after{
+      background-color: $color-secondary;
+    }
+  }
+  &--animated-secondary{
+    &:hover{
+      color: $color-secondary;
+    }
+    &::after{
+      background-color: $color-main;
+    }
+  }
+  &--nav{
+    color: $color-secondary;
+    border: 1px solid currentColor;
+  }
+  &--body{
+    background-color: #fff;
+    color: black;
+  }
+  &:hover{
+    text-decoration: none;
+  }
+  &::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    opacity: 0;
+    width: 100%;
+    transition: all .3s ease-out;
+    border-radius: .6rem;
+    z-index: -1;
+    transform: scale3d(0.7, 1, 1)
+  }
+  &:hover::after{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
